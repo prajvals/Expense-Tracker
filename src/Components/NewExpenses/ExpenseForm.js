@@ -2,25 +2,42 @@ import "./ExpenseForm.css";
 import { useState } from "react";
 const ExpenseForm = () => {
 
-  const [title,setTitle] = useState('')
-  const [amount,setAmount] = useState('')
-  const [date,setDate] = useState('')
+  // const [title,setTitle] = useState('')
+  // const [amount,setAmount] = useState('')
+  // const [date,setDate] = useState('')
 
+  const [userInput,setUserInput] = useState({
+    title:'',
+    amount:'',
+    date:''
+  })
   const titleChangeHandler = (event) => {
     const typedInput = event.target.value
     console.log(typedInput)
-    setTitle(typedInput)
+    setUserInput({
+      ...userInput,
+      title:typedInput
+    })
+    // setTitle(typedInput)
   }
 
   const amountChangeHandler = (event) => {
     const typedInput = event.target.value 
     console.log(typedInput)
-    setAmount(typedInput)
+    setUserInput({
+      ...userInput,
+      amount:typedInput
+    })
+    // setAmount(typedInput)
   }
 
    const dateChangeHandler = (event) => {
      const dateChanged = event.target.value
-     setDate(dateChanged)
+      setUserInput({
+        ...userInput,
+        date:dateChanged
+      })   
+     //  setDate(dateChanged)
    }
 
   return (
@@ -29,7 +46,7 @@ const ExpenseForm = () => {
         <div className="new-expense__control">
           <label> Title </label>
           <input type="text" onChange={titleChangeHandler}/>
-          <label>{title}</label>
+          <label>{userInput.title}</label>
         </div>
         <div className="new-expense__control">
           <label> Amount </label>
@@ -38,6 +55,7 @@ const ExpenseForm = () => {
         <div className="new-expense__control">
           <label> Date </label>
           <input type="date" min="2019-01-01" max="2022-01-01" onChange={dateChangeHandler} />
+          <label>{userInput.date}</label>
         </div>
         <div className="new-expense__actions">
           <button type="submit">ADD EXPENSE</button>
