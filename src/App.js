@@ -23,10 +23,18 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const onAddExpense = (newExpense) => {
+    const expenseItem = {...newExpense,id:Math.random()}
+    console.log(expenseItem)
+  }
+  const onFilterSelection = (filterSelection) => {
+    console.log(filterSelection)
+  }
   return (
     <div>
-      <NewExpenses/>
-      <Expenses expenseList={expenses}/>
+      <NewExpenses onAddExpense={onAddExpense}/>
+      <Expenses expenseList={expenses} onFilterSelection = {onFilterSelection}/>
     </div>
   );
 }
