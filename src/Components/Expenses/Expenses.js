@@ -7,13 +7,11 @@ function Expenses(props) {
   const expenseList = props.expenseList;
   return (
     <div>
-      <ExpenseFilter onFilterSelection = {props.onFilterSelection}/>
     <Card className = "expenses">
-      <ExpenseItem 
-        date={expenseList[0].date}
-        title={expenseList[0].title}
-        amount={expenseList[0].amount}
-      />
+      <ExpenseFilter onFilterSelection = {props.onFilterSelection}/>
+      {expenseList.map(expense => 
+      <ExpenseItem title={expense.title} amount = {expense.amount} date ={expense.date}/>
+      )}
     </Card>
     </div>
   );
