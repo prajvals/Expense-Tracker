@@ -1,12 +1,8 @@
 import "./ExpenseFilter.css"
-import { useState } from "react";
 const ExpenseFilter = (props) => {
-
-  const [filterSelection, setFilterSelection] = useState("")
 
   const filterSelectionChangeHandler = (event) => {
     const presentSelection = event.target.value
-    setFilterSelection(presentSelection)
     props.onFilterSelection(presentSelection)
   }
 

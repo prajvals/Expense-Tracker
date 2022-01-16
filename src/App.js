@@ -29,7 +29,6 @@ function App() {
 
   const onAddExpense = (newExpense) => {
     const expenseItem = {...newExpense,id:Math.random()}
-    console.log(expenseItem)
     setExpenseRecord((previousState)=>{
       return [expenseItem, ...previousState];
     });

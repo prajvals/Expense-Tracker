@@ -5,12 +5,9 @@ import "./ExpenseItem.css";
 
 function ExpenseItem(props) {
 
-  const [title,setTitle] = useState(props.title)
+  const [title,] = useState(props.title)
 
-  const changeTitle = () => {
-    setTitle("updated")
-    console.log("We Updated the state")
-  }
+  
 
   return (
       <Card className="expense-item">
@@ -19,7 +16,7 @@ function ExpenseItem(props) {
         <h2>{title}</h2>
         <div className="expense-item__price"> {props.amount} </div>
       </div>
-      <button onClick={changeTitle}>Change Title</button>
+      {/* <button onClick={changeTitle}>Change Title</button> */}
     </Card>
   );
 }
