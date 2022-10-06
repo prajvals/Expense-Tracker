@@ -1,7 +1,7 @@
 # Expense-Tracker
 
 1. A Budgeting App right in your Browser.
-2. Tech used: useState Hooks, component level state Mangement and Dynamically rendered the list, Conditionally Modified the component display
+2. **Tech used: useState Hooks, component level state Mangement and Dynamically rendered the list, Conditionally Modified the component display**
 4. Has the facility of adding more expenses to the expense management system here.
 5. Displays the Spending in terms of Mercury bars allowing for quick comparison.
 
