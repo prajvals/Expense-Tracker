@@ -5,7 +5,7 @@
 4. Has the facility of adding more expenses to the expense management system here.
 5. Displays the Spending in terms of Mercury bars allowing for quick comparison.
 
-Tech Used: **React.js, JSX, javascript, CSS**, Visual Studio Code, Github.
+Tech Used: ** React.js, JSX, javascript, CSS**, Visual Studio Code, Github.
 
 # Steps to run
 
